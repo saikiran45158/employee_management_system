@@ -11,7 +11,7 @@ export default async  function authenticate(data:userType){
     }
     catch(err){
         if(err instanceof AxiosError){
-            if(err.status===401)
+            if(err.status===401||err.status===404)
                 throw new Error('incorrect username or password')
             else
                 throw new Error(`server down wait for some time`)
