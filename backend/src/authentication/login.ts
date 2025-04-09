@@ -14,7 +14,7 @@ export async function loginUser(req: Request, res: Response) {
     const AdminPass = req.body.password
     pool.query('select * from users where userName=?', [AdminName], (err, result) => {
         if (err) {
-            console.log(err)
+            console.log("err",err);
             res.status(500).send({ errMsg: 'database error' })
         }
         else {
