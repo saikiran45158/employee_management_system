@@ -21,7 +21,7 @@ export function token_checker(req:Request,res:Response,next:NextFunction):void{
         next();
     }
     catch(err){
-        res.status(404).send({msg:'wrong credentials'})
+        res.status(401).send({msg:'wrong credentials'})
         return;
     }
 }

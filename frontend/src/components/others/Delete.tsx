@@ -1,5 +1,5 @@
 import {useRef} from "react"
-import EmployeeObject from "../services/employeeService"
+import EmployeeObject from "../../services/employeeService"
 export default function Delete(){
     const eid:React.RefObject<HTMLInputElement|null>=useRef(null)
     function handleSubmit(eve: { preventDefault: () => void }){

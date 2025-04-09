@@ -12,11 +12,11 @@ interface DataInf{
 
 export function addEmployee(req:Request,res:Response):void{
    const data:DataInf=req.body
-   console.log(data)
+   //console.log(data)
    conn.query('insert into mytab(EmpId,EmpName,EmpDesig,EmpDept,EmpSal) values(?,?,?,?,?)',[data.EmpId,data.EmpName,data.EmpDesig,data.EmpDept,data.EmpSal],(err,result)=>{
     if(err){
         console.log(err)
-        return res.status(500).send({error:'Error occured'})
+        return res.status(409).send({error:'Error occured'})
     }
     else
         return res.status(200).send({msg:'done'})
