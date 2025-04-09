@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
 import { Request, Response } from 'express'
-import mysql, { QueryResult, RowDataPacket } from 'mysql2'
+import mysql, {  RowDataPacket } from 'mysql2'
 dotenv.config()
 
 const pool = mysql.createPool({
@@ -48,29 +48,3 @@ export async function loginUser(req: Request, res: Response) {
 }
 
 
-
-// res.cookie('token', token, {
-//     maxAge: 1 * 60 * 60 * 1000
-// })
-
-// const payload = {
-//     user: process.env.ADMIN,
-//     password: process.env.ADMIN_PASS,
-// }
-// // export function loginUser(req: Request, res: Response): any {
-// //     const userName = req.body.user
-// //     const userPass = req.body.password
-// if (payload.user != userName || payload.password != userPass) {
-//     console.log('invalid user :', userName)
-//     return res.status(401).send({ err: 'wrong credentials' })
-// }
-// if (!process.env.SECRET_KEY)
-//     throw new Error('secret key undefined')
-// const secretkey: jwt.Secret = process.env.SECRET_KEY
-// const token = jwt.sign(payload, secretkey, { expiresIn: '1h' })
-// res.cookie('token', token, {
-//     maxAge: 1 * 60 * 60 * 1000
-// })
-
-// return res.status(200).send({ token: token })
-// // }
