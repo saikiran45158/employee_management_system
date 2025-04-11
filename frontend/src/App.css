@@ -1,0 +1,31 @@
+a{
+  text-decoration: none;
+  color:white;
+  font-size: large;
+}
+td,th{
+  border:1px solid black;
+}
+thead{
+  font-weight : bolder;
+}
+table{
+  width: 50%;
+  height:300px;
+  font-size: large;
+}
+.login-input{
+  padding: 10px;
+  font-size: medium;
+  border-radius: 5px;
+  border: none;
+}
+#log-btn{
+  display: inline-block;
+  margin-top: 5%;
+  width:50%;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(141, 111, 169);
+  color: beige;
+}
